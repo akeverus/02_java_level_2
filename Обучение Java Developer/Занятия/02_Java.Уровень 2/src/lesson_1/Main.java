@@ -30,5 +30,6 @@ public class Main {
         }
 
         DayOfWeek.getHoursToEndWeek(DayOfWeek.SATURDAY);
+
     }
 }
