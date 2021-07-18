@@ -35,6 +35,5 @@ public enum DayOfWeek {
         } else {
             System.out.printf("До конца рабочей недели осталось %d часов\n",hoursToEndWeek);
         }
-
     }
 }

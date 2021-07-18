@@ -31,4 +31,5 @@ abstract class Being implements RunnableJumpable{
             return false;
         }
     }
+
 }
