@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="sendMessage" layoutX="-1.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="38.0" prefWidth="297.0" text="Отправить сообщение" />
+            <Button fx:id="deleteMessage" layoutX="295.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteMessage" prefHeight="38.0" prefWidth="304.0" text="Удалить сообщение" />
+            <TextArea fx:id="generalTextArea" prefHeight="303.0" prefWidth="600.0" />
+            <TextField fx:id="myTextField" layoutY="303.0" prefHeight="58.0" prefWidth="600.0" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
