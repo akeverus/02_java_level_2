@@ -56,7 +56,7 @@ public class Main {
 
         Runnable r2 = ()->{
             for (int i = 0; i < arr2.length; i++) {
-                arr2[i] = (float) (arr2[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+                arr2[i] = (float) (arr2[i] * Math.sin(0.2f + (i + h) / 5) * Math.cos(0.2f + (i + h) / 5) * Math.cos(0.4f + (i + h) / 2));
             }
         };
 
@@ -65,6 +65,13 @@ public class Main {
 
         myThread1.start();
         myThread2.start();
+
+        try {
+            myThread1.join();
+            myThread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         System.arraycopy(arr1, 0, arr, 0, h);
         System.arraycopy(arr2, 0, arr, h, h);
